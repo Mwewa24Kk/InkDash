@@ -1,0 +1,137 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Make Order - InkDash Print</title>
+  <link rel="stylesheet" href="theme.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="brand-badge">ID</div>
+        <div>
+          <div>InkDash Print</div>
+          <div class="helper">Express printing</div>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="makeorder.html">Make Order</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign up</a>
+      </div>
+      <div class="nav-actions">
+        <a class="button ghost" href="login.html">Returning?</a>
+        <a class="button primary" href="signup.html">Create account</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container hero-grid">
+      <div>
+        <h1 class="section-title">Create your print order</h1>
+        <p class="helper">Upload documents and customize printing, cover pages, and delivery.</p>
+        <form class="form" data-order-form>
+          <div class="input-group">
+            <label for="file">Upload document</label>
+            <input id="file" type="file" />
+            <div class="helper">PDF or DOCX recommended. Max 200MB.</div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label for="type">Document type</label>
+              <select id="type" name="type">
+                <option>Assignment</option>
+                <option>Dissertation</option>
+                <option>Thesis</option>
+                <option>Business proposal</option>
+                <option>Research proposal</option>
+                <option>Normal printing</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="color">Color</label>
+              <select id="color" name="color">
+                <option value="bw">Black & white</option>
+                <option value="color">Color</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label for="pages">Pages</label>
+              <input id="pages" name="pages" type="number" min="1" value="10" />
+            </div>
+            <div class="input-group">
+              <label for="copies">Copies</label>
+              <input id="copies" name="copies" type="number" min="1" value="1" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label>
+                <input type="checkbox" name="binding" /> Add binding
+              </label>
+              <div class="helper">Perfect binding for theses and proposals.</div>
+            </div>
+            <div class="input-group">
+              <label>
+                <input type="checkbox" name="delivery" checked /> Deliver in Lusaka
+              </label>
+              <div class="helper">Same-day delivery in central areas.</div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="addons">Extras</label>
+            <textarea id="addons" placeholder="Proofreading, AI detection, cover page details"></textarea>
+          </div>
+
+          <div class="input-group">
+            <label for="address">Delivery address</label>
+            <textarea id="address" placeholder="Street, area, landmark"></textarea>
+          </div>
+
+          <div class="notice">Payment step will appear after order review.</div>
+          <button class="button primary" type="submit">Review order</button>
+        </form>
+      </div>
+
+      <div class="hero-card">
+        <h2 class="section-title">Order summary</h2>
+        <div class="order-summary">
+          <div><strong>Print:</strong> <span data-summary="pages">10 pages x 1 copy</span></div>
+          <div><strong>Mode:</strong> <span data-summary="color">Black & white</span></div>
+          <div><strong>Subtotal:</strong> <span data-summary="subtotal">K 0.00</span></div>
+          <div><strong>Binding:</strong> <span data-summary="binding">No binding</span></div>
+          <div><strong>Delivery:</strong> <span data-summary="delivery">Pick-up</span></div>
+          <div><strong>Total:</strong> <span data-summary="total">K 0.00</span></div>
+        </div>
+        <p class="helper" style="margin-top: 14px;">
+          Pricing sample: K1.50/page B&W, K3.50/page color, K10 binding, K15 delivery.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+     All rights reserved. Developed by Moyo Kondwani & Mwisa Jones 2026.</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
